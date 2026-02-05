@@ -1,0 +1,13 @@
+#########################
+# DeltaCion | Тупиздень #
+#########################
+
+# <= Main =>
+node_modules
+.npmrc
+
+# <= Buld =>
+/build
+
+# <= Mac =>
+.DS_Store
