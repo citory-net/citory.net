@@ -12,7 +12,9 @@
 	
 		"baseUrl": ".",
     	"paths": {
+			"$root": 		["./src"],
 			"$assets": 		["./assets"],
+			"$layout": 		["./src/layout"],
 			"$image": 		["./assets/image"],
 			"$styles": 		["./assets/styles"],
 			"$components": 	["./src/components"]
@@ -21,6 +23,6 @@
     	"outDir": "./dist",
     	"rootDir": "./src"
 	},
-	"include": ["src/**/*"],
+	"include": ["src/**/*", "svelte.config.js", "svelte.config.js"],
 	"exclude": ["node_modules/*"]
 }

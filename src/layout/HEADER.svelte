@@ -3,12 +3,12 @@
     import Hypercube from '$components/crap/Hypercube.svelte';
     import Button from '$components/crap/Button.svelte';
 
-    import '$styles/body.scss'
+    import '$styles/main_styles.scss'
 </script>
 
 <!--[ Style ]-->
 <style lang="scss">
-    @use "./assets/styles/variables.scss" as *;
+    @use "$styles/variables.scss" as *;
 
     .header  {
         margin:     0vh;
