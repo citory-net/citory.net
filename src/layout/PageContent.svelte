@@ -5,7 +5,7 @@
 
 <Header/>
 <p class="main-text" align="center">
-    Citory lmao
+    Я Backend разработчик и в фронт не умею. Так что этот сайт это буквально попытка обучения вебу..
     <br><br><br>
     Citory lmao
     <br><br><br>

@@ -3,11 +3,22 @@
 }
 
 :global(:root), :global(html), :global(body) {
+    @extend .no-textselect;
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+}
+
+.no-textselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    text-decoration: none;
 }
 
 .main-div {
@@ -37,8 +48,6 @@
 
 :global(.content-main) {
     box-sizing: border-box;
-    overflow: hidden;
-    overflow-y: auto;
     width: 100%;
     flex: 1;
 }
