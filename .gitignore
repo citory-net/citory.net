@@ -7,7 +7,7 @@ node_modules
 .npmrc
 
 # <= Buld =>
-/build
+#/build
 
 # <= Mac =>
 .DS_Store
