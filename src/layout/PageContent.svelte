@@ -3,89 +3,23 @@
     import Footer       from '../layout/Footer.svelte';
 </script>
 
-<Header/>
-<p class="main-text" align="center">
-    Я Backend разработчик и в фронт не умею. Так что этот сайт это буквально попытка обучения вебу..
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-    Citory lmao
-    <br><br><br>
-</p>
-<Footer/>
+<style>
+    
+</style>
+
+
+<div class="text-box">
+    <pre class="main-text">
+             /\_/\  
+            ( o.o )
+             &gt; ^ &lt;
+    </pre>
+
+    <span>Да, я спиздил эту хуйню</span><br>
+    <span>И да, я рукожоп</span>
+    <div>
+        <a href="https://www.youtube.com/watch?v=Di-FQELJ3gk">→ /youtube</a>
+        <a href="https://discord.gg/MEBkvJbe4P">→ /discord</a>
+        <a href="https://t.me/LOWcitory">→ /telegram</a>
+    </div>
+</div>

@@ -1,5 +1,6 @@
 :global(:root) {
-    background-image: url("$image/another/background.gif");
+    //background-image: url("$image/another/background.gif");
+    background-color: #060606;
 }
 
 :global(:root), :global(html), :global(body) {

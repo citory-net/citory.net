@@ -1,3 +1,140 @@
+assets\styles\BannerStyle.scss:
+:root {
+    --accent-color: #fa7d61;
+    --background: #0b0b0b;
+
+    /* --accent-color: #0b0b0b;
+    --background: #dbd2d2; */
+}
+
+body {
+    margin: 0;
+    font-size: clamp(14px, 1.2vw, 20px);
+
+    color: var(--accent-color);
+    background: var(--background);
+
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+pre {
+    text-align: start;
+    user-select: none;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 6px 14px;
+    border: 1px solid var(--accent-color);
+    border-radius: 20px;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: .25s;
+}
+
+a:hover {
+            background: var(--accent-color);
+            color: var(--background);
+}
+
+.text-box {
+    margin-left: 1rem;
+            text-align: center;
+}
+    
+
+assets\styles\MainStyle.scss:
+:global(:root) {
+    //background-image: url("$image/another/background.gif");
+    background-color: #060606;
+}
+
+:global(:root), :global(html), :global(body) {
+    @extend .no-textselect;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.no-textselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    text-decoration: none;
+}
+
+.main-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(50, 50, 50, 0.1);
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+:global(header) {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 5px solid rgba(0, 0, 0, 1);
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 10;
+    height: 10vh;
+    width: 100%;
+}
+
+:global(.content-main) {
+    box-sizing: border-box;
+    width: 100%;
+    flex: 1;
+}
+
+:global(footer) {
+    border-top: 5px solid rgba(0, 0, 0, 1);
+    box-sizing: border-box;
+    position: static;
+    height: 10%;
+    width: 100%;
+}
+
+assets\styles\TextStyles.scss:
+:global(.main-text) {
+    color: bisque;
+    font-size: larger;
+    //font-style: oblique;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+index.html:
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div id="dc_svelte_init"></div>                     <!--[     Svelte ]-->
+    <script type="module" src="/src/index.js"></script> <!--[     Init   ]-->
+  </body>
+</html>
+
+src\App.svelte:
 <!-- svelte-ignore css_unused_selector -->
 <!--[                  By DeltaЛох блять                  ]-->
 <script>
@@ -9,9 +146,11 @@
 </script>               <!--[                   Imports ]-->
 
 <style lang="scss">
-    @use '$styles/MainStyle.scss' as *;
-    @use '$styles/TextStyles.scss' as *;
-    @use '$styles/BannerStyle.scss' as *;
+    :global {
+        @use '$styles/MainStyle.scss' as *;
+        @use '$styles/TextStyles.scss' as *;
+        @use '$styles/BannerStyle.scss' as *;
+    }
 </style>                <!--[                   Styles  ]-->
 
 <svelte:head>
@@ -65,3 +204,86 @@ npm тянет гору пакетов, которые даже не испол�
 А следовательно исправить это сейчас уже невозможно.
 
 ]-->
+
+src\index.js:
+import { mount } from 'svelte';
+import App from './App.svelte';
+
+const target = document.getElementById("dc_svelte_init");
+
+if (target) mount(App, { target });
+else console.error("Cannot found "+target+" block in index.html")
+
+src\layout\Footer.svelte:
+<footer>
+    123312
+</footer>
+
+
+src\layout\Header.svelte:
+<header>
+    123312
+</header>
+
+
+src\layout\PageContent.svelte:
+<script>
+    import Header       from '../layout/Header.svelte';
+    import Footer       from '../layout/Footer.svelte';
+</script>
+
+<pre class="main-text">
+         /\_/\  
+        ( o.o )
+         &gt; ^ &lt;
+</pre>
+
+<div class="text-box">
+    <span>Ты зашёл не туда.</span><br>
+    <span>Но файлы — там, куда надо.</span>
+    <div>
+        <a href="/uploads">→ /uploads</a>
+        <a href="https://discord.gg/nc5szAhwVb">→ /discord</a>
+    </div>
+</div>
+
+svelte.config.js:
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+
+export default {
+  preprocess: [vitePreprocess()]
+};
+
+vite.config.ts:
+import { svelte } from '@sveltejs/vite-plugin-svelte'
+
+import { defineConfig } from 'vite'
+import path from 'path'
+
+export default defineConfig({
+	plugins: [svelte()],
+	build: {
+    	outDir: 'build',
+    	sourcemap: true
+  	},
+	server: {
+		host: "0.0.0.0",
+		port: 1663
+	},
+	resolve: {
+    	alias: {
+        	"$root": 		path.resolve(__dirname, "./src"),
+        	"$assets": 		path.resolve(__dirname, "./assets"),
+        	"$layout": 		path.resolve(__dirname, "./src/layout"),
+        	"$image": 		path.resolve(__dirname, "./assets/image"),
+        	"$styles": 		path.resolve(__dirname, "./assets/styles"),
+        	"$components": 	path.resolve(__dirname, "./src/components")
+		}
+	},
+	css: {
+    	preprocessorOptions: {
+      		scss: {}
+		}
+	}
+});
+

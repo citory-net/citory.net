@@ -1,0 +1,42 @@
+:global(:root) { --accent-color: bisque; }
+
+:global(body) {
+    margin: 0;
+    font-size: clamp(14px, 1.2vw, 20px);
+
+    color: var(--accent-color);
+    background: var(--background);
+
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+:global(pre) {
+    text-align: start;
+    user-select: none;
+}
+
+:global(a) {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 6px 14px;
+    border: 1px solid var(--accent-color);
+    border-radius: 20px;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: .25s;
+}
+
+:global(a:hover) {
+            background: var(--accent-color);
+            color: var(--background);
+}
+
+:global(.text-box) {
+    margin-left: 1rem;
+            text-align: center;
+}
+    

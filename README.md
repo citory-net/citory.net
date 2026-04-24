@@ -29,7 +29,7 @@
 2. npm run dev
     2.1 or: npm run build
 
-Dev url: 0.0.0.0:1663
+Dev url: localhost:1663
 PROFIT!!!
 ```
 
