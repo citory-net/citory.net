@@ -21,7 +21,7 @@
 
 :root {
     --main-color: #060606;
-    --main-color-transperent: #060606F0;
+    --main-color-transperent: #060606cb;
 
     --accent-color: #ffe4c4;
 
@@ -30,7 +30,6 @@
 
     /* Setup main vars */
     /*background-color: var(--main-color);*/
-    background-image: url(../assets/screens/background.gif);
     color: var(--accent-color);
     font-family: monospace;
 }
