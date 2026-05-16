@@ -16,10 +16,10 @@ function getCookie(name) {
 }
 
 async function loadAll() {
-    const themesResponse = await fetch('jsons/themes.json');
+    const themesResponse = await fetch('/jsons/themes.json');
     themes = await themesResponse.json();
     
-    const backgroundsResponse = await fetch('jsons/backgrounds.json');
+    const backgroundsResponse = await fetch('/jsons/backgrounds.json');
     backgrounds = await backgroundsResponse.json();
 }
 
