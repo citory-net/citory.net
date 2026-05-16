@@ -1,8 +1,8 @@
 import json, os
 
 output_dir = "jsons"
-background_assets_dir = "assets\\screens\\backgrounds"
-styles_assets_dir = "assets\\themes"
+background_assets_dir = "assets/screens/backgrounds"
+styles_assets_dir = "assets/themes"
 
 def get_files(path: str, extensions: list):
     returned_files = []
