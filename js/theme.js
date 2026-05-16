@@ -1,5 +1,8 @@
-const themes = ["white", "dark", "bruh"];
-const theme_name = "theme";
+let themes = [];
+let backgrounds = [];
+
+const theme_name = "theme_dc";
+const background_name = "background_dc";
 
 function setCookie(themeID) {
     const expires = new Date();
@@ -8,14 +11,23 @@ function setCookie(themeID) {
 }
 
 function getCookie(name) {
-  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-  return match ? match[2] : null;
+    const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
 }
 
+async function loadAll() {
+    const themesResponse = await fetch('jsons/themes.json');
+    themes = await themesResponse.json();
+    
+    const backgroundsResponse = await fetch('jsons/backgrounds.json');
+    backgrounds = await backgroundsResponse.json();
+}
 
 function applyTheme(themeID) {
     const theme = themes[themeID];
-    document.getElementById(theme_name).href = `assets/themes/${theme}.css`;
+    if (theme) {
+        document.getElementById(theme_name).href = `assets/themes/${theme}`;
+    }
 }
 
 function changeTheme() {
@@ -28,12 +40,16 @@ function changeTheme() {
     setCookie(nextThemeID);
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', async () => {
+    await loadAll();
+    
     let themeID = getCookie('theme');
     if (themeID === null) {
         themeID = 0;
         setCookie(themeID);
-    } else themeID = parseInt(themeID, 10);
+    } else {
+        themeID = parseInt(themeID, 10);
+    }
     applyTheme(themeID);
     
     const button = document.getElementById('theme-button');
