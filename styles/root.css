@@ -29,7 +29,7 @@
     --sources-btn-color: #919191;
 
     /* Setup main vars */
-    /*background-color: var(--main-color);*/
+    background-color: #000000;
     color: var(--accent-color);
     font-family: monospace;
 }
