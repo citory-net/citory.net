@@ -25,8 +25,17 @@ async function loadAll() {
 
 function applyTheme(themeID) {
     const theme = themes[themeID];
-    if (theme) {
-        document.getElementById(theme_name).href = `assets/themes/${theme}`;
+    if (!theme) return;
+
+    const link = document.getElementById(theme_name);
+    if (!link) return;
+
+    let currentHref = link.href;
+    let match = currentHref.match(/^(.*?)(?:styles\/|assets\/themes\/)[^\/]+$/);
+    if (match) link.href = match[1] + 'assets/themes/' + theme;
+    else {
+        let basePath = currentHref.substring(0, currentHref.lastIndexOf('/') + 1);
+        link.href = basePath + theme;
     }
 }
 
