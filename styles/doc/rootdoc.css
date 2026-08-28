@@ -1,42 +1,25 @@
-:root {
-    --bg-color: #111;
-    --text-color: #a6accd;
-    --accent-color: #38ffaa;
-    --header-color: #ffffff;
-    --comment-color: #676e95;
-}
+@import "../deco/colors.css";
 
 body {
-    color: var(--text-color);
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 1.5;
-    padding: 20px;
     margin: 0;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--text-color);
+    line-height: 1.5;
+    background: transparent;
+    position: relative;
+    min-height: 100vh;
 }
 
 .terminal {
     max-width: 900px;
     margin: 0 auto;
-    background-color: var(--bg-color);
+    background-color: var(--main-color-transperent);
     padding: 25px;
-    border-radius: 8px;
+    padding-top: 0px;
+    border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border: 1px solid #2f334d;
-}
-
-.http-headers {
-    color: var(--comment-color);
-    border-bottom: 2px dashed #2f334d;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-}
-
-.ascii-art {
-    color: var(--accent-color);
-    font-weight: bold;
-    overflow-x: auto;
-    white-space: pre;
-    margin: 20px 0;
 }
 
 h1, h2, h3 {
@@ -70,6 +53,14 @@ ul li::before {
 footer {
     margin-top: 40px;
     border-top: 1px solid #2f334d;
+}
+
+header {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #2f334d;
+}
+
+footer, header {
     padding-top: 15px;
     font-size: 0.9em;
     color: var(--comment-color);
