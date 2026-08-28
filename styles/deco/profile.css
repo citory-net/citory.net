@@ -1,4 +1,4 @@
-@import "root.css";
+@import "deco/colors.css";
 
 .profile-block {
     display: flex;
@@ -17,12 +17,4 @@
 
 .profile-avatar, .profile-text {
     margin: 1vw;
-}
-
-
-.url-block {
-    text-align: center;
-    font-size: 14px;
-
-    margin-bottom: 5%;
 }

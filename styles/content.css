@@ -1,0 +1,38 @@
+@import "deco/colors.css";
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--accent-color);
+    background: transparent;
+    position: relative;
+}
+
+header {
+    margin-bottom: 40px;
+    /*
+    border-bottom: 1px solid #2f334d;
+    */
+}
+
+footer {
+    margin-top: auto;
+    /*
+    border-top: 1px solid #2f334d;
+    */
+}
+
+footer, header {
+    display: flex;
+    font-size: 1.2em;
+    padding: 10px;
+    justify-content: center;
+    color: var(--accent-color);
+}

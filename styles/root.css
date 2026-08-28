@@ -1,5 +1,6 @@
+@import "deco/colors.css";
+
 :root, html, body, a, img {
-    /* Disable userselect */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -7,31 +8,36 @@
     -ms-user-select: none;
     user-select: none;
     text-decoration: none;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 :root, html, body {
     scrollbar-width: none;
-    overflow: hidden;
-
-    margin:0;
-    padding:0;
-    height:100%;
-    width:100%;
+    -ms-overflow-style: none;
+    overflow: auto;     
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
 :root {
-    --main-color: #060606;
-    --main-color-transperent: #060606cb;
-
-    --accent-color: #ffe4c4;
-
-    --download-btn-color: #c4ffc7;
-    --sources-btn-color: #919191;
-
-    /* Setup main vars */
-    background-color: #000000;
     color: var(--accent-color);
     font-family: monospace;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img, image {
+    align-self: center;
+    width: 650px;
+    height: 492px;
 }
 
 .main-div {

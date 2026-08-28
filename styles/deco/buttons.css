@@ -1,5 +1,10 @@
-@import "colors.css";
+@import "./colors.css";
 
+.url-block {
+    text-align: center;
+}
+
+/*  All Buttons    */
 .url-block a {
     display: inline-block;
     margin-top: 20px;
@@ -8,49 +13,71 @@
     text-decoration: none;
     font-size: large;
     transition: .25s;
+
+    border: 2px solid #ffffff;
 }
 
+/* youtube.com */
 .url-block a[href*="youtube.com"] {
+    border-color: var(--youtube-color);
     color: var(--youtube-color);
-    border: 2px solid var(--youtube-color);
 }
 
 .url-block a[href*="youtube.com"]:hover {
+    box-shadow: 0px 0px 5px 0px var(--youtube-color);
     background: var(--youtube-color);
+    
+    color: var(--black-color);
 }
 
+/* github.com */
 .url-block a[href*="github.com"] {
+    border-color: var(--github-color);
     color: var(--github-color);
-    border: 2px solid var(--github-color);
 }
 
 .url-block a[href*="github.com"]:hover {
+    box-shadow: 0px 0px 5px 0px var(--github-color);
     background: var(--github-color);
+    
+    color: var(--black-color);
 }
 
+/* discord.gg */
 .url-block a[href*="discord.gg"] {
+    border-color: var(--discord-color);
     color: var(--discord-color);
-    border: 2px solid var(--discord-color);
 }
 
 .url-block a[href*="discord.gg"]:hover {
+    box-shadow: 0px 0px 5px 0px var(--discord-color);
     background: var(--discord-color);
+    
+    color: var(--black-color);
 }
 
+/* t.me */
 .url-block a[href*="t.me"] {
+    border-color: var(--telegram-color);
     color: var(--telegram-color);
-    border: 2px solid var(--telegram-color);
 }
 
 .url-block a[href*="t.me"]:hover {
+    box-shadow: 0px 0px 5px 0px var(--telegram-color);
     background: var(--telegram-color);
+    
+    color: var(--black-color);
 }
 
+/* soundcloud.com */
 .url-block a[href*="soundcloud.com"] {
+    border-color: var(--soundcloud-color);
     color: var(--soundcloud-color);
-    border: 2px solid var(--soundcloud-color);
 }
 
 .url-block a[href*="soundcloud.com"]:hover {
+    box-shadow: 0px 0px 5px 0px var(--soundcloud-color);
     background: var(--soundcloud-color);
+    
+    color: var(--black-color);
 }

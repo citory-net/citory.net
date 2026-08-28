@@ -1,0 +1,27 @@
+:root {
+    background-color: #000000;
+
+    /*   Content   */
+    --bg-color: #0d0e15;
+    --black-color: #191919;
+    --text-color: #a6accd;
+    --accent-color: #ffe4c4;
+    --header-color: #fff;
+    --comment-color: #676e95;
+
+    /*   Main Page   */
+    --main-color: #060606;
+    --main-color-transperent: #060606cb;
+
+    /* Socials */
+    --github-color: #606060;
+    --youtube-color: #CD201F;
+    --discord-color: #0A66C2;
+    --telegram-color: #0099FF;
+    --soundcloud-color: #FF3300;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
