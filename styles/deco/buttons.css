@@ -17,6 +17,19 @@
     border: 2px solid #ffffff;
 }
 
+/* base url */
+.url-block a {
+    border-color: var(--magic-color);
+    color: var(--magic-color);
+}
+
+.url-block a:hover {
+    box-shadow: 0px 0px 5px 0px var(--magic-color);
+    background: var(--magic-color);
+    
+    color: var(--black-color);
+}
+
 /* youtube.com */
 .url-block a[href*="youtube.com"] {
     border-color: var(--youtube-color);

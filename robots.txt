@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /projects/
 Disallow: /n0f4ck1ng1nd3x/
 
 Sitemap: https://www.citory.net/sitemap.xml
