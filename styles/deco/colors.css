@@ -13,13 +13,20 @@
     --main-color: #060606;
     --main-color-transperent: #060606cb;
 
+    /* vch color */
+    --magic-color: #b1000d;
+
     /* Socials */
     --github-color: #606060;
     --youtube-color: #CD201F;
     --discord-color: #0A66C2;
     --telegram-color: #0099FF;
     --soundcloud-color: #FF3300;
-    --magic-color: #b1000d;
+
+    /* Projects */
+    --fantasyaxe-color: #f00;
+    --destroytokyo-color: #0f0;
+    --anisaturn-color: #00f;
 }
 
 a {
